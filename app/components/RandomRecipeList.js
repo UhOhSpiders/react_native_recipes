@@ -74,7 +74,7 @@ const RandomRecipeList = () => {
       </View>
       <View style={{ flex: 1 }}>
         {searchLoader ? (
-          <ActivityIndicator />
+          <ActivityIndicator style={{paddingTop:130}}/>
         ) : searchError ? (
           <Text>Error</Text>
         ) : (

@@ -11,6 +11,16 @@ import FavouriteButton from "./FavouriteButton";
 const RecipeDetails = ({ id }) => {
   const { data, isLoading, error } = useFetch(`${id}/information`);
 
+
+//   let uniqueIngredients = []
+//   if(!isLoading){
+//  (data.data.extendedIngredients.filter((obj,index)=> {
+//     return index === data.data.extendedIngredients.findIndex(o => obj.name === o.name)
+//   })).map((item) => (       
+//     console.log(item.name)
+//   ))
+//   }
+
   return (
     <View style={{ flex: 1 }}>
       {isLoading ? (
@@ -57,14 +67,18 @@ const RecipeDetails = ({ id }) => {
             text={"servings"}
           />
           <ScrollView style={appStyles.ingredientsListContainer}>
-            {data.data.extendedIngredients.map((item) => (
+            {/* removes duplicate ingredients from API response */}
+            {(data.data.extendedIngredients.filter((obj,index)=> {
+    return index === data.data.extendedIngredients.findIndex(o => obj.id === o.id)
+  })).map((item) => (
               <IngredientListItem item={item} key={item.id} />
             ))}
           </ScrollView>
 
           <ScrollView style={{ flex: 1 }}>
             {data.data.analyzedInstructions[0].steps.map((item) => (
-              <RecipeStep item={item} key={item.id} />
+              
+              <RecipeStep item={item} key={item.number} />
             ))}
           </ScrollView>
         </View>

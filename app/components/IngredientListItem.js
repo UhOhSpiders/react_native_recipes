@@ -6,7 +6,6 @@ import { useState } from 'react'
 const IngredientListItem = ({item}) => {
   const [toggleCheckBox, setToggleCheckBox] = useState(false)
   const strikeThrough = {textDecorationLine:"line-through", color:"grey"}
-
   return (
     <>
     <View style={appStyles.ingredientListItem}>

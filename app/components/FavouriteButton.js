@@ -1,6 +1,6 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
+// import { Pressable } from "react-native-gesture-handler";
 import appStyles from "../styles/appStyles";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -20,17 +20,17 @@ const FavouriteButton = ({ id }) => {
     <View>
       {itemFavourited(idInt) ? (
         <View>
-          <TouchableOpacity
+          <Pressable
             style={[appStyles.favouriteButton, { backgroundColor: "red" }]}
           >
             <AntDesign name="star" size={28} />
-          </TouchableOpacity>
+          </Pressable>
         </View>
       ) : (
         <View>
-          <TouchableOpacity style={appStyles.favouriteButton}>
+          <Pressable style={appStyles.favouriteButton}>
             <AntDesign name="staro" size={28} />
-          </TouchableOpacity>
+          </Pressable>
         </View>
       )}
     </View>

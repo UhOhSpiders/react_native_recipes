@@ -35,7 +35,7 @@ const FilterList = ({ data, filterTitle, handleNewParams }) => {
 
   return (
     <View>
-      <Text>Filter by {filterTitle}:</Text>
+      <Text style={{padding:5, paddingLeft:10}}>Filter by {filterTitle}:</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => (
