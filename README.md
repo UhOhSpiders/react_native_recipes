@@ -1,5 +1,6 @@
-# About
+![Screenshot 2023-11-07 at 17 11 03](https://github.com/UhOhSpiders/react_native_recipes/assets/78114230/d5ebf2e4-db88-48ee-a5e5-55ce8ee8b23b)
 
+# About
 This is a recipe app that allows the user to search and filter recipes by specific criteria 
 
 # Built Wtih
