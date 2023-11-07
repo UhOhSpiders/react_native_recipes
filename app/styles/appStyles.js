@@ -15,6 +15,7 @@ const appStyles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: "#cccccc",
+    
   },
   cardHeader: {
     fontWeight: "bold",
@@ -46,11 +47,12 @@ const appStyles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff3d1",
+    backgroundColor: "#fff98c",
     borderRadius: 20,
     margin: 3,
     borderColor: "#cccccc",
     borderWidth: 1,
+    
   },
   thumbnailImage: {
     width: 100,
@@ -60,9 +62,21 @@ const appStyles = StyleSheet.create({
   favouriteButton:{
     padding: 5,
     margin:4,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#cccccc",
+  },
+  ingredientListItem:{
+    
+    flexDirection:"row",
+    margin: 5
+  },
+  ingredientListText:{
+    marginLeft: 7
+  },
+  ingredientsListContainer:{
+    backgroundColor: "#fff3d1",
+    maxHeight:270,
+    margin: 5,
+    padding: 5,
+    borderRadius:10
   }
 });
 

@@ -56,11 +56,11 @@ const RecipeDetails = ({ id }) => {
             info={data.data.servings}
             text={"servings"}
           />
-          <View style={appStyles.cardDetailText}>
+          <ScrollView style={appStyles.ingredientsListContainer}>
             {data.data.extendedIngredients.map((item) => (
               <IngredientListItem item={item} key={item.id} />
             ))}
-          </View>
+          </ScrollView>
 
           <ScrollView style={{ flex: 1 }}>
             {data.data.analyzedInstructions[0].steps.map((item) => (

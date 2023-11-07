@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 const RecipeStep = ({item}) => {
   return (
     <View>
-    <Text style={{paddingTop:20}}>{item.number}.   {item.step}</Text>
+    <Text style={{paddingVertical:10}}><Text style={{fontWeight:'bold'}}>{item.number}.</Text> {item.step}</Text>
     </View>
   )
 }

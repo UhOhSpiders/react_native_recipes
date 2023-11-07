@@ -19,7 +19,7 @@ export default () => {
       <Tabs.Screen
         options={{
           tabBarLabel: ({ focused }) => (
-            <Text style={{ fontSize: 10, color: focused ? "#ffc966": "white"  }}>
+            <Text style={{ fontSize: 10, color: focused ? "#fff98c": "white"  }}>
               Browse
             </Text>
           ),
@@ -28,7 +28,7 @@ export default () => {
               name="silverware-fork-knife"
               size={28}
               style={{ marginBottom: -3 }}
-              color={focused ? "#ffc966": "white"}
+              color={focused ? "#fff98c": "white"}
             />
           ),
         }}
@@ -38,7 +38,7 @@ export default () => {
         name="favourites"
         options={{
           tabBarLabel: ({ focused }) => (
-            <Text style={{ fontSize: 10, color: focused ? "#ffc966": "white" }}>
+            <Text style={{ fontSize: 10, color: focused ? "#fff98c": "white" }}>
               Favourites
             </Text>
           ),
@@ -48,7 +48,7 @@ export default () => {
               size={28}
               style={{ marginBottom: -3 }}
               name="heart"
-              color={focused ? "#ffc966": "white"}
+              color={focused ? "#fff98c": "white"}
             />
           ),
         }}
@@ -57,7 +57,7 @@ export default () => {
         name="search"
         options={{
           tabBarLabel: ({ focused }) => (
-            <Text style={{ fontSize: 10, color: focused ? "#ffc966": "white" }}>
+            <Text style={{ fontSize: 10, color: focused ? "#fff98c": "white" }}>
               Search
             </Text>
           ),
@@ -67,7 +67,7 @@ export default () => {
               size={28}
               style={{ marginBottom: -3 }}
               name="search"
-              color={focused ? "#ffc966": "white"}
+              color={focused ? "#fff98c": "white"}
             />
           ),
         }}

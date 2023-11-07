@@ -8,7 +8,7 @@ const RecipeDetailPage = () => {
   const params = useLocalSearchParams();
 
   return (
-    <View style={{ padding: 20, flex: 1 }}>
+    <View style={{ paddingHorizontal: 15, flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }}></Stack.Screen>
      <RecipeDetails id={params.id}/>
     </View>

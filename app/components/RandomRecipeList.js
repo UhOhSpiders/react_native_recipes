@@ -17,7 +17,7 @@ const RandomRecipeList = () => {
   const [searchResult, setSearchResult] = useState([]);
   const [searchError, setSearchError] = useState(null);
   const [searchSent, setSearchSent] = useState(false);
-  const rapidApiKey = process.env.RAPID_API_KEY;
+  const rapidApiKey = process.env.RAPID_API_KEY
 
   useEffect(() => {
     search();
@@ -53,7 +53,7 @@ const RandomRecipeList = () => {
   const handleSearch = () => {
     search();
   };
-
+  
   return (
     <View
       style={{
@@ -62,7 +62,7 @@ const RandomRecipeList = () => {
         flex: 1,
       }}
     >
-      <View>
+      <View style={{position:"absolute", zIndex:1, width: "100%"}}>
         <TouchableOpacity style={appStyles.button} onPress={handleSearch}>
           <MaterialCommunityIcons
             name="refresh"
@@ -79,10 +79,11 @@ const RandomRecipeList = () => {
           <Text>Error</Text>
         ) : (
           <FlatList
+          ListHeaderComponent={<View style={{height:55}}></View>}
             data={searchResult}
             renderItem={({ item }) => <RecipeCard item={item} linkPath={"random"} />}
             keyExtractor={(item) => item.id}
-            style={{flex:1}}
+            style={{flex:1 }}
           />
         )}
       </View>
